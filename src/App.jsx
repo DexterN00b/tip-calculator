@@ -30,8 +30,14 @@ function TipCalculator() {
         {" "}
         How did your friend like the service?{" "}
       </SelectPercentage>
-      <Output bill={bill} tip={tip} />
-      <Reset onReset={handleReset} />
+
+      {bill && (
+        <>
+          {" "}
+          <Output bill={bill} tip={tip} />
+          <Reset onReset={handleReset} />{" "}
+        </>
+      )}
     </div>
   );
 }
